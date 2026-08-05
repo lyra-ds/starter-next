@@ -1,0 +1,13 @@
+[data-brand="atlas"] {
+  --brand: #176b87;
+  --brand-contrast: #ffffff;
+  --brand-radius: 0.75rem;
+  --brand-font: "Plus Jakarta Sans", sans-serif;
+}
+
+[data-brand="moss"] {
+  --brand: #3f6b4f;
+  --brand-contrast: #ffffff;
+  --brand-radius: 1.25rem;
+  --brand-font: "Plus Jakarta Sans", sans-serif;
+}
