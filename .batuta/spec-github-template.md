@@ -14,8 +14,8 @@ extension `npx create-next-app -e <repo-url>`).
   straight after clone). Personalization happens via a post-clone checklist
   in the README (approach A).
 - **Content:** the current demo (`components/starter-demo.tsx` — theme toggle
-  + live white-label rebranding) stays as the home page, untouched. Users
-  delete it when they start building.
+  - live white-label rebranding) stays as the home page, untouched. Users
+    delete it when they start building.
 
 ## Scope — 7 items
 

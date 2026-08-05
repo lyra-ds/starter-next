@@ -12,10 +12,10 @@ Stack template: `templates/nextjs.md` (Next.js app — Lyra DS consumer starter)
   until then, verification is `pnpm build` + manual check).
 - Build: `pnpm build`
 - Lint: none (no ESLint/Prettier configured)
-Execution: sequential
-Worktree: medium+
-Install: pnpm install
-Runtime: compozy
+  Execution: sequential
+  Worktree: medium+
+  Install: pnpm install
+  Runtime: compozy
 
 ## Project constraints
 

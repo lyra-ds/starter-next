@@ -1,15 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import {
-  Badge,
-  Button,
-  Card,
-  Container,
-  Input,
-  Stack,
-  useTheme,
-} from '@lyra-ds/react'
+import { Badge, Button, Card, Container, Input, Stack, useTheme } from '@lyra-ds/react'
 
 type Theme = 'light' | 'dark' | 'system'
 type Brand = 'lyra' | 'atlas' | 'moss'
@@ -57,8 +49,8 @@ export function StarterDemo() {
             <Badge>Next.js starter</Badge>
             <h1>Make Lyra yours.</h1>
             <p>
-              This small settings screen uses Lyra’s public styles and React
-              components, with live theme and white-label brand controls.
+              This small settings screen uses Lyra’s public styles and React components, with live
+              theme and white-label brand controls.
             </p>
           </header>
 

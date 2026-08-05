@@ -21,10 +21,12 @@
 ### Task 1: Prettier
 
 **Files:**
+
 - Create: `.prettierrc.json`, `.prettierignore`
 - Modify: `package.json` (devDependencies + scripts)
 
 **Interfaces:**
+
 - Produces: `pnpm format` (write) and `pnpm format:check` scripts — Task 4's CI calls `format:check`.
 
 - [ ] **Step 1: Install**
@@ -74,10 +76,12 @@ git commit -m "chore: add prettier with format scripts"
 ### Task 2: ESLint
 
 **Files:**
+
 - Create: `eslint.config.mjs`
 - Modify: `package.json` (devDependencies + `lint` script)
 
 **Interfaces:**
+
 - Produces: `pnpm lint` script — Task 4's CI calls it.
 
 - [ ] **Step 1: Install**
@@ -89,16 +93,16 @@ pnpm add -D eslint eslint-config-next @eslint/eslintrc
 - [ ] **Step 2: Create `eslint.config.mjs`** (the flat-config pattern create-next-app generates)
 
 ```js
-import { FlatCompat } from '@eslint/eslintrc'
+import { FlatCompat } from '@eslint/eslintrc';
 
-const compat = new FlatCompat({ baseDirectory: import.meta.dirname })
+const compat = new FlatCompat({ baseDirectory: import.meta.dirname });
 
 const config = [
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   { ignores: ['.next/**'] },
-]
+];
 
-export default config
+export default config;
 ```
 
 - [ ] **Step 3: Add script to `package.json`**
@@ -125,10 +129,12 @@ git commit -m "chore: add eslint flat config with next presets"
 ### Task 3: Vitest + example test
 
 **Files:**
+
 - Create: `vitest.config.mts`, `vitest.setup.ts`, `components/starter-demo.test.tsx`
 - Modify: `package.json` (devDependencies + `test` script), `.batuta/profile.md` (Test line)
 
 **Interfaces:**
+
 - Consumes: `StarterDemo` (named export of `components/starter-demo.tsx`), `ThemeProvider` from `@lyra-ds/react`.
 - Produces: `pnpm test` script (vitest run) — Task 4's CI calls it.
 
@@ -141,8 +147,8 @@ pnpm add -D vitest @vitejs/plugin-react jsdom @testing-library/react @testing-li
 - [ ] **Step 2: Create `vitest.config.mts`**
 
 ```ts
-import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vitest/config'
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   plugins: [react()],
@@ -150,13 +156,13 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: ['./vitest.setup.ts'],
   },
-})
+});
 ```
 
 - [ ] **Step 3: Create `vitest.setup.ts`** (jest-dom matchers + matchMedia stub — jsdom has none and ThemeProvider needs it for the system theme)
 
 ```ts
-import '@testing-library/jest-dom/vitest'
+import '@testing-library/jest-dom/vitest';
 
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -170,46 +176,46 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: () => {},
     dispatchEvent: () => false,
   }),
-})
+});
 ```
 
 - [ ] **Step 4: Write the failing test — `components/starter-demo.test.tsx`**
 
 ```tsx
-import { ThemeProvider } from '@lyra-ds/react'
-import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
-import { describe, expect, it } from 'vitest'
-import { StarterDemo } from './starter-demo'
+import { ThemeProvider } from '@lyra-ds/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { describe, expect, it } from 'vitest';
+import { StarterDemo } from './starter-demo';
 
 function renderDemo() {
   return render(
     <ThemeProvider>
       <StarterDemo />
     </ThemeProvider>,
-  )
+  );
 }
 
 describe('StarterDemo', () => {
   it('renders the starter headline', () => {
-    renderDemo()
-    expect(screen.getByRole('heading', { name: 'Make Lyra yours.' })).toBeInTheDocument()
-  })
+    renderDemo();
+    expect(screen.getByRole('heading', { name: 'Make Lyra yours.' })).toBeInTheDocument();
+  });
 
   it('switches the white-label brand', async () => {
-    renderDemo()
-    const user = userEvent.setup()
-    await user.click(screen.getByRole('button', { name: 'Atlas' }))
-    expect(screen.getByRole('main')).toHaveAttribute('data-brand', 'atlas')
-  })
+    renderDemo();
+    const user = userEvent.setup();
+    await user.click(screen.getByRole('button', { name: 'Atlas' }));
+    expect(screen.getByRole('main')).toHaveAttribute('data-brand', 'atlas');
+  });
 
   it('switches the theme preference', async () => {
-    renderDemo()
-    const user = userEvent.setup()
-    await user.click(screen.getByRole('button', { name: 'dark' }))
-    expect(screen.getByText('Currently using the dark theme.')).toBeInTheDocument()
-  })
-})
+    renderDemo();
+    const user = userEvent.setup();
+    await user.click(screen.getByRole('button', { name: 'dark' }));
+    expect(screen.getByText('Currently using the dark theme.')).toBeInTheDocument();
+  });
+});
 ```
 
 - [ ] **Step 5: Add script, run test to verify it fails first**
@@ -239,10 +245,12 @@ git commit -m "test: add vitest with starter demo example tests"
 ### Task 4: CI workflow
 
 **Files:**
+
 - Create: `.github/workflows/ci.yml`
 - Modify: `package.json` (add `packageManager` field)
 
 **Interfaces:**
+
 - Consumes: scripts `lint`, `format:check`, `test`, `build` from Tasks 1–3.
 
 - [ ] **Step 1: Pin the package manager in `package.json`** (top level, after `"private"`)
@@ -292,6 +300,7 @@ git commit -m "ci: add lint, format, test and build workflow"
 ### Task 5: LICENSE
 
 **Files:**
+
 - Create: `LICENSE`
 
 - [ ] **Step 1: Create `LICENSE`** — standard MIT text, verbatim, with:
@@ -332,14 +341,16 @@ git commit -m "docs: add MIT license"
 ### Task 6: README rewrite
 
 **Files:**
+
 - Modify: `README.md` (full rewrite)
 
 **Interfaces:**
+
 - Consumes: scripts from Tasks 1–3 (named in the docs), `metadata` export in `app/layout.tsx` (already generic — the checklist points at it, no code change).
 
 - [ ] **Step 1: Rewrite `README.md`**
 
-```markdown
+````markdown
 # Lyra DS Next.js template
 
 A minimal [Next.js](https://nextjs.org) template for
@@ -354,6 +365,7 @@ Click **Use this template** on GitHub, or:
 ```sh
 npx create-next-app@latest my-app -e https://github.com/lyra-ds/starter-next
 ```
+````
 
 Plain cloning works too. Then:
 
@@ -391,14 +403,14 @@ See `app/brand.css` for the two example brands the demo switches between.
 
 ## Scripts
 
-| Script              | What it does                  |
-| ------------------- | ----------------------------- |
-| `pnpm dev`          | Start the dev server          |
-| `pnpm build`        | Production build              |
-| `pnpm test`         | Run tests (Vitest + jsdom)    |
-| `pnpm lint`         | ESLint (next presets)         |
-| `pnpm format`       | Prettier write                |
-| `pnpm format:check` | Prettier check (used in CI)   |
+| Script              | What it does                |
+| ------------------- | --------------------------- |
+| `pnpm dev`          | Start the dev server        |
+| `pnpm build`        | Production build            |
+| `pnpm test`         | Run tests (Vitest + jsdom)  |
+| `pnpm lint`         | ESLint (next presets)       |
+| `pnpm format`       | Prettier write              |
+| `pnpm format:check` | Prettier check (used in CI) |
 
 CI runs lint, format check, tests, and build on every push and PR.
 
@@ -408,7 +420,8 @@ CI runs lint, format check, tests, and build on every push and PR.
 - [Lyra repository](https://github.com/lyra-ds/lyra)
 - [@lyra-ds/styles on npm](https://www.npmjs.com/package/@lyra-ds/styles)
 - [@lyra-ds/react on npm](https://www.npmjs.com/package/@lyra-ds/react)
-```
+
+````
 
 - [ ] **Step 2: Verify formatting**
 
@@ -419,7 +432,7 @@ Run: `pnpm format:check` — expected: PASS (run `pnpm format` first if Prettier
 ```bash
 git add README.md
 git commit -m "docs: rewrite readme as template guide with post-clone checklist"
-```
+````
 
 ### Task 7: Mark repo as template (manual, owner-only)
 

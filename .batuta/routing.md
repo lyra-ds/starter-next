@@ -5,17 +5,17 @@ at onboarding, 2026-08-05 — mirrored from ../blade. Full trio installed:
 opencode 1.18.3 + codex 0.144.5 (ChatGPT subscription) + claude 2.1.222.
 Runtime: compozy (delegations run as managed sessions per `compozy.md`).
 
-| Complexity | Examples | Executor | Cost |
-|---|---|---|---|
-| Trivial | rename, config, copy change, simple unit test | opencode + `opencode/kimi-k2.7-code` | cents (API) |
-| Medium | isolated feature, bugfix with clear repro | codex (default model) | ChatGPT subscription |
-| Complex | multi-file feature/refactor that a precise brief can fully specify | codex `-m gpt-5.6-sol`, reasoning high | ChatGPT subscription |
-| Critical | architecture decisions, security-sensitive work, tasks needing the conversation's full context or real judgment | claude (session) | Claude subscription |
+| Complexity | Examples                                                                                                        | Executor                               | Cost                 |
+| ---------- | --------------------------------------------------------------------------------------------------------------- | -------------------------------------- | -------------------- |
+| Trivial    | rename, config, copy change, simple unit test                                                                   | opencode + `opencode/kimi-k2.7-code`   | cents (API)          |
+| Medium     | isolated feature, bugfix with clear repro                                                                       | codex (default model)                  | ChatGPT subscription |
+| Complex    | multi-file feature/refactor that a precise brief can fully specify                                              | codex `-m gpt-5.6-sol`, reasoning high | ChatGPT subscription |
+| Critical   | architecture decisions, security-sensitive work, tasks needing the conversation's full context or real judgment | claude (session)                       | Claude subscription  |
 
 ## Support lanes
 
-| Role | Examples | Executor | Cost |
-|---|---|---|---|
+| Role     | Examples                                               | Executor                                          | Cost             |
+| -------- | ------------------------------------------------------ | ------------------------------------------------- | ---------------- |
 | Research | project map sweep, brief context, "where does X live?" | opencode + `lmstudio/prism-ml/bonsai-27b` (local) | free (local GPU) |
 
 ## Rules
