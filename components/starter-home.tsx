@@ -27,7 +27,9 @@ export function StarterHome() {
     <main className="home" data-brand={brand === 'lyra' ? undefined : brand}>
       <header className="home__hero">
         {/* The mark swaps with the theme, same pattern as the DS Brand component. */}
+        {/* eslint-disable-next-line @next/next/no-img-element -- static theme-swapped SVG marks, next/image adds nothing */}
         <img className="home__mark" src="/lyra-mark.svg" alt="" width={72} height={72} />
+        {/* eslint-disable-next-line @next/next/no-img-element -- static theme-swapped SVG marks, next/image adds nothing */}
         <img
           className="home__mark home__mark--dark"
           src="/lyra-mark-light.svg"
@@ -80,6 +82,7 @@ export function StarterHome() {
               size="sm"
               label={option.value}
               variant={resolvedTheme === option.value ? 'primary' : 'ghost'}
+              aria-pressed={resolvedTheme === option.value}
               onClick={() => setTheme(option.value)}
             >
               <Icon name={option.icon} size={16} />
@@ -93,6 +96,7 @@ export function StarterHome() {
               type="button"
               size="sm"
               variant={brand === option.value ? 'primary' : 'ghost'}
+              aria-pressed={brand === option.value}
               onClick={() => setBrand(option.value)}
             >
               {option.label}
