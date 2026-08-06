@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Badge, Button, Card, useTheme } from '@lyra-ds/react'
+import { Badge, Button, Card, Icon, IconButton, useTheme } from '@lyra-ds/react'
 
 type Theme = 'light' | 'dark' | 'system'
 type Brand = 'lyra' | 'atlas' | 'moss'
@@ -10,6 +10,12 @@ const brands: Array<{ value: Brand; label: string }> = [
   { value: 'lyra', label: 'Lyra' },
   { value: 'atlas', label: 'Atlas' },
   { value: 'moss', label: 'Moss' },
+]
+
+const themes: Array<{ value: Theme; icon: 'sun' | 'moon' | 'settings' }> = [
+  { value: 'light', icon: 'sun' },
+  { value: 'dark', icon: 'moon' },
+  { value: 'system', icon: 'settings' },
 ]
 
 export function StarterHome() {
@@ -68,16 +74,17 @@ export function StarterHome() {
 
       <footer className="home__controls">
         <div role="group" aria-label="Theme preference" className="button-group">
-          {(['light', 'dark', 'system'] as Theme[]).map((option) => (
-            <Button
-              key={option}
+          {themes.map((option) => (
+            <IconButton
+              key={option.value}
               type="button"
               size="sm"
-              variant={theme === option ? 'primary' : 'ghost'}
-              onClick={() => setTheme(option)}
+              label={option.value}
+              variant={theme === option.value ? 'primary' : 'ghost'}
+              onClick={() => setTheme(option.value)}
             >
-              {option}
-            </Button>
+              <Icon name={option.icon} size={16} />
+            </IconButton>
           ))}
         </div>
         <div role="group" aria-label="Brand" className="button-group">
