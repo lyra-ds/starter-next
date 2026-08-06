@@ -1,27 +1,64 @@
-# Lyra DS Next.js starter
+# Lyra DS Next.js template
 
-A minimal Next.js starter for [Lyra Design System](https://lyra-ds.dev).
-It imports the public Lyra styles and React packages, loads the required local
-fonts, and demonstrates theme selection plus live white-label branding.
+A minimal [Next.js](https://nextjs.org) template for
+[Lyra Design System](https://lyra-ds.dev). It ships the public Lyra styles
+and React packages, local fonts, theme selection (light / dark / system),
+live white-label branding, and ready-to-go lint, test, and CI setup.
 
-## Quickstart
+## Create your project
 
-Clone the repository, then install and run the starter:
+Click **Use this template** on GitHub, or:
+
+```sh
+npx create-next-app@latest my-app -e https://github.com/lyra-ds/starter-next
+```
+
+Plain cloning works too. Then:
 
 ```sh
 pnpm install
 pnpm dev
 ```
 
-`npm install` / `npm run dev` and `yarn` / `yarn dev` work too.
+`npm` and `yarn` work as well.
 
-## What it shows
+## After cloning
 
-- `@lyra-ds/styles` loaded once in the root layout.
-- `ThemeProvider` and `useTheme` for light, dark, and system preferences.
-- A small settings composition built with Lyra React components.
-- Live rebranding with only `--brand`, `--brand-contrast`, `--brand-radius`,
-  and `--brand-font`.
+- [ ] Rename `name` in `package.json`.
+- [ ] Edit the `metadata` export in `app/layout.tsx` (title, description).
+- [ ] Replace the example brands in `app/brand.css` with your own.
+- [ ] Swap `app/icon.svg` for your favicon.
+- [ ] When you start building, delete `components/starter-demo.tsx` (and its
+      test) and replace `app/page.tsx`.
+
+## White-label branding
+
+Lyra rebrands with only four CSS variables — everything else derives from
+them:
+
+```css
+[data-brand='acme'] {
+  --brand: #176b87;
+  --brand-contrast: #ffffff;
+  --brand-radius: 0.75rem;
+  --brand-font: 'Plus Jakarta Sans', sans-serif;
+}
+```
+
+See `app/brand.css` for the two example brands the demo switches between.
+
+## Scripts
+
+| Script              | What it does                |
+| ------------------- | --------------------------- |
+| `pnpm dev`          | Start the dev server        |
+| `pnpm build`        | Production build            |
+| `pnpm test`         | Run tests (Vitest + jsdom)  |
+| `pnpm lint`         | ESLint (next presets)       |
+| `pnpm format`       | Prettier write              |
+| `pnpm format:check` | Prettier check (used in CI) |
+
+CI runs lint, format check, tests, and build on every push and PR.
 
 ## Links
 

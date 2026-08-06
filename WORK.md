@@ -2,13 +2,15 @@
 
 ## In progress
 
-- (2026-08-05) GitHub template: design approved, spec at
-  `.batuta/spec-github-template.md`. Next: implementation plan
-  (superpowers:writing-plans), then execute via the Batuta cycle.
+- (2026-08-06) GitHub template: 6/7 itens entregues e commitados. Falta só o
+  passo manual do dono: marcar o repo como template no GitHub (Settings →
+  General → Template repository). Verificável depois com
+  `gh api repos/<owner>/starter-next --jq .is_template`.
 
 ## Done
 
-- [x] Template 5/7 LICENSE → kimi (opencode/kimi-k2.7-code, subprocess), commit no próximo sha (trail: .batuta/runs/2026-08-06-license.md)
+- [x] Template 6/7 README → kimi (opencode/kimi-k2.7-code, subprocess), commit abaixo (trail: .batuta/runs/2026-08-06-readme.md)
+- [x] Template 5/7 LICENSE → kimi (opencode/kimi-k2.7-code, subprocess), commit 3e2005a (trail: .batuta/runs/2026-08-06-license.md)
 - [x] Template 4/7 CI → kimi (opencode/kimi-k2.7-code, subprocess; lane voltou ao normal), commit 2bac337 (trail: .batuta/runs/2026-08-06-ci.md)
 - [x] Template 3/7 Vitest → codex via Compozy em worktree (1 retry: tocou pnpm-workspace.yaml fora do scope com placeholder), squash na main (trail: .batuta/runs/2026-08-06-vitest.md)
 - [x] Template 2/7 ESLint → codex via Compozy (escalado do kimi após 2 hangs; 2 feedbacks: quarentena pnpm resolveu versão errada, e padrão FlatCompat do plano estava defasado p/ v16 — flat config nativo aplicado), commit 6f44505 (trail: .batuta/runs/2026-08-05-eslint.md)
