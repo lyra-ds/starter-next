@@ -60,6 +60,13 @@ See `app/brand.css` for the two example brands the demo switches between.
 
 CI runs lint, format check, tests, and build on every push and PR.
 
+## AI agents
+
+The template ships an [`AGENTS.md`](./AGENTS.md) that points AI coding
+agents at the Lyra DS docs, the machine-readable component contracts
+([llms.txt](https://lyra-ds.dev/llms.txt)), and this project's commands and
+conventions. Keep it updated as your project evolves.
+
 ## Links
 
 - [Lyra DS](https://lyra-ds.dev)

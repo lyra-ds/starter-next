@@ -6,6 +6,7 @@
 
 ## Done
 
+- [x] README: seção AI agents documentando o AGENTS.md → kimi (opencode/kimi-k2.7-code, subprocess), commit no push seguinte (trail: .batuta/runs/2026-08-06-readme-agents.md)
 - [x] Template 7/7 marcar como template no GitHub → feito pelo dono; verificado via `gh repo view` → isTemplate: true (2026-08-06)
 - [x] Template 6/7 README → kimi (opencode/kimi-k2.7-code, subprocess), commit abaixo (trail: .batuta/runs/2026-08-06-readme.md)
 - [x] Template 5/7 LICENSE → kimi (opencode/kimi-k2.7-code, subprocess), commit 3e2005a (trail: .batuta/runs/2026-08-06-license.md)
