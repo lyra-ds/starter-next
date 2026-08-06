@@ -8,8 +8,7 @@ Stack template: `templates/nextjs.md` (Next.js app — Lyra DS consumer starter)
   (`@lyra-ds/react` ^0.4, `@lyra-ds/styles` ^0.4), fonts via @fontsource
   (Plus Jakarta Sans, JetBrains Mono).
 - Methodology: TDD; conventional commits; trunk-based.
-- Test: none yet (no test runner installed — add vitest before any TDD task;
-  until then, verification is `pnpm build` + manual check).
+- Test: `pnpm test` (vitest, jsdom)
 - Build: `pnpm build`
 - Lint: none (no ESLint/Prettier configured)
   Execution: sequential
