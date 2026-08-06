@@ -39,6 +39,18 @@ relative-paths-only rule in the brief; its reliability log in blade shows
 1 clean run vs 3 format failures — if deepseek stays clean there, consider
 swapping the lane here too.
 
+Transport log (2026-08-06): Compozy→opencode is broken on this machine —
+`session prompt --provider opencode` fails with an internal provider error
+(Console: missing `channel_id` upstream); trivial-lane items run via
+`opencode run` subprocess until the daemon is fixed. Compozy→codex works
+(used for medium lane). The task board's operator run-completion path is
+also refused (`invalid claim token`) — board is a partial lens; WORK.md is
+the source of truth. kimi hung twice (23min/8min, zero output) on one task
+then recovered — cap kimi runs at ~4min and escalate fast. pnpm 11's
+default minimumReleaseAge quarantine can silently backpedal freshly
+published packages (bit us with eslint-config-next 16.3.0 → 15.5.22);
+project has a narrow exclusion for @lyra-ds/* in pnpm-workspace.yaml.
+
 Commit attribution (user request, 2026-08-05): commits of delegated work must
 credit the real executor — `Co-Authored-By` trailer for the delegate (e.g.
 Codex/opencode model) plus a body line naming who implemented and who
