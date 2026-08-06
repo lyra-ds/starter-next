@@ -1,3 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <circle cx="16" cy="16" r="14" fill="#4f46e5" />
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .lyra-favicon-star { fill: #5B5BD6; }
+    .lyra-favicon-dot { fill: #A5A7EE; }
+    @media (prefers-color-scheme: dark) {
+      .lyra-favicon-star { fill: #EEF0FE; }
+      .lyra-favicon-dot { fill: #8285E4; }
+    }
+  </style>
+  <path class="lyra-favicon-star" d="M32 4C36.2 21.4 42.6 27.8 60 32C42.6 36.2 36.2 42.6 32 60C27.8 42.6 21.4 36.2 4 32C21.4 27.8 27.8 21.4 32 4Z"></path>
+  <circle class="lyra-favicon-star" cx="52" cy="12" r="3"></circle>
+  <circle class="lyra-favicon-dot" cx="12" cy="52" r="2"></circle>
 </svg>
