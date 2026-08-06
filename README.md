@@ -46,6 +46,9 @@ them:
 ```
 
 See `app/brand.css` for the two example brands the demo switches between.
+The demo's "Lyra" option is the baseline look: it removes `data-brand`
+entirely — never set the attribute without defining `--brand`, or the
+derived accent group resolves to nothing.
 
 ## Scripts
 

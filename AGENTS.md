@@ -33,6 +33,7 @@ Next.js template for [Lyra Design System](https://lyra-ds.dev).
 - White-label branding happens through exactly four CSS variables
   (`--brand`, `--brand-contrast`, `--brand-radius`, `--brand-font`) —
   see `app/brand.css`. Don't restyle Lyra components ad hoc; derive from
-  the brand tokens.
+  the brand tokens. The baseline Lyra look means no `data-brand`
+  attribute at all — never set it without defining `--brand`.
 - `components/starter-demo.tsx` is disposable demo content — template
   users delete it (see README "After cloning").
