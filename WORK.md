@@ -2,13 +2,11 @@
 
 ## In progress
 
-- (2026-08-06) GitHub template: 6/7 itens entregues e commitados. Falta só o
-  passo manual do dono: marcar o repo como template no GitHub (Settings →
-  General → Template repository). Verificável depois com
-  `gh api repos/<owner>/starter-next --jq .is_template`.
+(vazio)
 
 ## Done
 
+- [x] Template 7/7 marcar como template no GitHub → feito pelo dono; verificado via `gh repo view` → isTemplate: true (2026-08-06)
 - [x] Template 6/7 README → kimi (opencode/kimi-k2.7-code, subprocess), commit abaixo (trail: .batuta/runs/2026-08-06-readme.md)
 - [x] Template 5/7 LICENSE → kimi (opencode/kimi-k2.7-code, subprocess), commit 3e2005a (trail: .batuta/runs/2026-08-06-license.md)
 - [x] Template 4/7 CI → kimi (opencode/kimi-k2.7-code, subprocess; lane voltou ao normal), commit 2bac337 (trail: .batuta/runs/2026-08-06-ci.md)
