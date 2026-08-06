@@ -28,7 +28,7 @@ pnpm dev
 - [ ] Edit the `metadata` export in `app/layout.tsx` (title, description).
 - [ ] Replace the example brands in `app/brand.css` with your own.
 - [ ] Swap `app/icon.svg` for your favicon.
-- [ ] When you start building, delete `components/starter-demo.tsx` (and its
+- [ ] When you start building, delete `components/starter-home.tsx` (and its
       test) and replace `app/page.tsx`.
 
 ## White-label branding

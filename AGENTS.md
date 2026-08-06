@@ -35,5 +35,5 @@ Next.js template for [Lyra Design System](https://lyra-ds.dev).
   see `app/brand.css`. Don't restyle Lyra components ad hoc; derive from
   the brand tokens. The baseline Lyra look means no `data-brand`
   attribute at all — never set it without defining `--brand`.
-- `components/starter-demo.tsx` is disposable demo content — template
+- `components/starter-home.tsx` is disposable demo content — template
   users delete it (see README "After cloning").
