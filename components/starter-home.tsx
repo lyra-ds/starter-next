@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Badge, Button, Card, Icon, IconButton, useTheme } from '@lyra-ds/react'
 
-type Theme = 'light' | 'dark' | 'system'
+type Theme = 'light' | 'dark'
 type Brand = 'lyra' | 'atlas' | 'moss'
 
 const brands: Array<{ value: Brand; label: string }> = [
@@ -12,14 +12,13 @@ const brands: Array<{ value: Brand; label: string }> = [
   { value: 'moss', label: 'Moss' },
 ]
 
-const themes: Array<{ value: Theme; icon: 'sun' | 'moon' | 'settings' }> = [
+const themes: Array<{ value: Theme; icon: 'sun' | 'moon' }> = [
   { value: 'light', icon: 'sun' },
   { value: 'dark', icon: 'moon' },
-  { value: 'system', icon: 'settings' },
 ]
 
 export function StarterHome() {
-  const { theme, resolvedTheme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
   const [brand, setBrand] = useState<Brand>('lyra')
 
   return (
@@ -80,7 +79,7 @@ export function StarterHome() {
               type="button"
               size="sm"
               label={option.value}
-              variant={theme === option.value ? 'primary' : 'ghost'}
+              variant={resolvedTheme === option.value ? 'primary' : 'ghost'}
               onClick={() => setTheme(option.value)}
             >
               <Icon name={option.icon} size={16} />
