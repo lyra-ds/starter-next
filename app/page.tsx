@@ -1,5 +1,5 @@
-import { StarterDemo } from '../components/starter-demo'
+import { StarterHome } from '../components/starter-home'
 
 export default function Page() {
-  return <StarterDemo />
+  return <StarterHome />
 }

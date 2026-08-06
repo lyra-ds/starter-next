@@ -28,7 +28,7 @@ pnpm dev
 - [ ] Edit the `metadata` export in `app/layout.tsx` (title, description).
 - [ ] Replace the example brands in `app/brand.css` with your own.
 - [ ] Swap `app/icon.svg` for your favicon.
-- [ ] When you start building, delete `components/starter-demo.tsx` (and its
+- [ ] When you start building, delete `components/starter-home.tsx` (and its
       test) and replace `app/page.tsx`.
 
 ## White-label branding
@@ -46,6 +46,9 @@ them:
 ```
 
 See `app/brand.css` for the two example brands the demo switches between.
+The demo's "Lyra" option is the baseline look: it removes `data-brand`
+entirely — never set the attribute without defining `--brand`, or the
+derived accent group resolves to nothing.
 
 ## Scripts
 
