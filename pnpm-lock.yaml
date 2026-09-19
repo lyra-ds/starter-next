@@ -15,11 +15,11 @@ importers:
         specifier: ^5.2.5
         version: 5.3.0
       '@lyra-ds/react':
-        specifier: ^0.4.0
-        version: 0.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        specifier: ^1.0.0
+        version: 1.0.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@lyra-ds/styles':
-        specifier: ^0.4.0
-        version: 0.4.0
+        specifier: ^1.0.0
+        version: 1.0.0
       next:
         specifier: ^16.2.10
         version: 16.3.0(@babel/core@7.29.7(supports-color@7.2.0))(@types/node@24.13.3)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -457,14 +457,14 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@lyra-ds/react@0.4.0':
-    resolution: {integrity: sha512-E4Bd5bb65ni1ZQCUO488oA6EgkHbJIH3q1e+Nuvtt+BABS6rSUGh1O8vCypAJwNcgzUKflqZq4KJGzcdwXzfnQ==}
+  '@lyra-ds/react@1.0.0':
+    resolution: {integrity: sha512-SxbNBQtVLn5ob65qHqs6Pr8WPwBDp+4eFNDPjVcVIKGoNBKFB5pXqpAjm25Nv7uWsa29HDBmCUyGjDvkG3KOXw==}
     peerDependencies:
       react: '>=18 <20'
       react-dom: '>=18 <20'
 
-  '@lyra-ds/styles@0.4.0':
-    resolution: {integrity: sha512-mrQy20q4BPoPG/DBfH+Yf4qvtwNMxesrleaz6OXx8bWUSx8P216Q+TrXaUIPs4KZKDCoiZRK2qZnM74+QiiTaQ==}
+  '@lyra-ds/styles@1.0.0':
+    resolution: {integrity: sha512-XSN5T732VOjD/Aic//55ilGrMCtjMgrxumQczoL07APTjkdMJoq6AvhNXbmsU20qv5KwEssCiQiNNbdFdCrbhA==}
 
   '@napi-rs/wasm-runtime@1.2.2':
     resolution: {integrity: sha512-JfB4kuJQjaoHuCTseIINHtHWeJnvgEcxjwA5t/Y00ZgaOO1Crz3fjT/p8kT28zA/Caz7oiUMn3d6H2yOVCVwuw==}
@@ -1336,6 +1336,7 @@ packages:
   eslint@9.39.5:
     resolution: {integrity: sha512-DgZS62aPLXKlnxILS/AYCoRvHaZeXceIzlXPkkGGzJWSow1aEk0lbTlxUSlyjC8jcaKxAdOnTDz+o1JFSBsyjw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -1810,8 +1811,8 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  lucide-react@1.25.0:
-    resolution: {integrity: sha512-/mdJTRbiwcLOQ1NZZK1amZF9rIZyvO18D6r9TngE6TG1NmqHgFuT4eE7Xrkm9UsXMbBJD1NlfwHVltCDWHrOTw==}
+  lucide-react@1.30.0:
+    resolution: {integrity: sha512-tUIr2jXLbWpCkdtH8XP7P7YppM9ueWgTky99lpWDY6z5REs6B+O6ZQ3U5tHkUUY59ANyOv/PBcs8E4Fe3KO3eA==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
@@ -2840,13 +2841,13 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@lyra-ds/react@0.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+  '@lyra-ds/react@1.0.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
     dependencies:
-      lucide-react: 1.25.0(react@19.2.8)
+      lucide-react: 1.30.0(react@19.2.8)
       react: 19.2.8
       react-dom: 19.2.8(react@19.2.8)
 
-  '@lyra-ds/styles@0.4.0': {}
+  '@lyra-ds/styles@1.0.0': {}
 
   '@napi-rs/wasm-runtime@1.2.2(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)':
     dependencies:
@@ -4261,7 +4262,7 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lucide-react@1.25.0(react@19.2.8):
+  lucide-react@1.30.0(react@19.2.8):
     dependencies:
       react: 19.2.8
 
