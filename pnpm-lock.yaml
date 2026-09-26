@@ -15,11 +15,11 @@ importers:
         specifier: ^5.2.5
         version: 5.3.0
       '@lyra-ds/react':
-        specifier: ^1.0.2
-        version: 1.0.2(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        specifier: ^1.1.0
+        version: 1.1.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@lyra-ds/styles':
-        specifier: ^1.0.3
-        version: 1.0.3
+        specifier: ^1.1.0
+        version: 1.1.0
       next:
         specifier: ^16.2.10
         version: 16.3.0(@babel/core@7.29.7(supports-color@7.2.0))(@types/node@24.13.3)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -457,14 +457,14 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@lyra-ds/react@1.0.2':
-    resolution: {integrity: sha512-pmysUe6ZlM5DHSygFvXILGl5Y2hT0hhwRBkP6sDd5UG7CdC6myaLMObf3lTnc6bWSv32ZIcm1kszHmpLwTozNQ==}
+  '@lyra-ds/react@1.1.0':
+    resolution: {integrity: sha512-8HODYknywSAewXK2bA2cqcjBUkqpCGRWmffoc2Qe6ue/Zc9cQmKWbbNAKDK8wg5vSaTdmJikNmcclum5wN11LQ==}
     peerDependencies:
       react: '>=18 <20'
       react-dom: '>=18 <20'
 
-  '@lyra-ds/styles@1.0.3':
-    resolution: {integrity: sha512-GtIlYIl/sJEw/450VFJyZky/HtVRAXu391OhBAGtAuI235mVhmD9+0yjKDDGXrEu+sDyvrHjgY4AK/UUgOGGFw==}
+  '@lyra-ds/styles@1.1.0':
+    resolution: {integrity: sha512-otbRpNOeB+Mm84qkhvIWFaHyLXXkTnGSFGh19scFv9NT7LWI5d5PczA4uXAl7lq6A78w0fka7DNqrJ1PAsON3w==}
 
   '@napi-rs/wasm-runtime@1.2.2':
     resolution: {integrity: sha512-JfB4kuJQjaoHuCTseIINHtHWeJnvgEcxjwA5t/Y00ZgaOO1Crz3fjT/p8kT28zA/Caz7oiUMn3d6H2yOVCVwuw==}
@@ -2841,13 +2841,13 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@lyra-ds/react@1.0.2(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+  '@lyra-ds/react@1.1.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
     dependencies:
       lucide-react: 1.30.0(react@19.2.8)
       react: 19.2.8
       react-dom: 19.2.8(react@19.2.8)
 
-  '@lyra-ds/styles@1.0.3': {}
+  '@lyra-ds/styles@1.1.0': {}
 
   '@napi-rs/wasm-runtime@1.2.2(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)':
     dependencies:
