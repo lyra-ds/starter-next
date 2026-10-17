@@ -22,6 +22,23 @@ pnpm dev
 
 `npm` and `yarn` work as well.
 
+## Lyra compatibility
+
+This template pairs `@lyra-ds/react` 2.0.0 with `@lyra-ds/styles` 1.2.0.
+React and ReactDOM peer support remains `>=18 <20`; this adoption does not
+upgrade React or Next.js.
+
+The starter does not mount `ToastProvider`. If you add it, info and success
+toasts default to 8000 ms, while error/danger toasts stay persistent. Hover
+and focus independently pause the remaining time. Set
+`<ToastProvider duration={4000}>` to restore the previous timing for every
+tone. Explicit per-toast durations override provider settings, including
+`duration: 0` for persistence; use it to keep action-bearing toasts visible.
+Later provider configuration changes apply only to newly queued toasts.
+
+To roll back, restore both previous dependency ranges (`^1.1.0`) and the
+previous lockfile. No data migration is needed.
+
 ## After cloning
 
 - [ ] Rename `name` in `package.json`.
